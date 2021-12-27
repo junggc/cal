@@ -34,28 +34,14 @@ public class Calculator {
             System.out.println("+,-,*,/,% 연산자를 입력하세요.");
             Scanner c = new Scanner(System.in);
 
-            System.out.println(1111111);
             String pattern = "^[0-9]*$";
-            System.out.println(2222222);
-         //   cal.setB(Integer.toString(c.nextInt()));
-            System.out.println(3333333);
+
           try {
-              System.out.println(4443333);
               cal.setB(c.nextLine());
-              System.out.println(53333);
-              if (cal.getB().equals("+")){
-
-              }else if(cal.getB().equals("-")){
-
-              }else if(cal.getB().equals("*")){
-
-              }else if(cal.getB().equals("/")){
-
-              }else if(cal.getB().equals("%")){
-
-              }else if(Pattern.matches(pattern, cal.getB())){
-
-              }else
+              if (!cal.getB().equals("+") && !cal.getB().equals("-") && !cal.getB().equals("*") && !cal.getB().equals("/") && !cal.getB().equals("%")) {
+                  System.out.println("연산자를 입력하세요.");
+                  continue loop1;
+              }
 
           } catch (Exception e2) {
               System.out.println("~~~~~~+,-,*,/,% 만 입력 하세요.");
@@ -64,26 +50,35 @@ public class Calculator {
             }  break;
 
         }
-      //      System.out.println(cal.getB());
-
             Scanner an = new Scanner(System.in);
             System.out.println("숫자!!!를 입력하세요.");
-            cal.setC(an.nextInt());
-     //       System.out.println(cal.getC());
+        loop2:
+      while(true) {
+          try {
+              cal.setC(Integer.parseInt(an.nextLine()));
+          } catch (Exception e3) {
+              System.out.println("여기도 숫자만 입력하세요.");
+              continue loop2;
+          }
+          break;
+      }
+          //       System.out.println(cal.getC());
 
-            if (cal.getB().equals("+")) {
-                System.out.println("입력한 값들의 합은 " + (cal.getA() + cal.getC()) + " 입니다.");
-            } else if (cal.getB().equals("-")) {
-                System.out.println(cal.getA() - cal.getC());
-            } else if (cal.getB().equals("*")) {
-                System.out.println(cal.getA() * cal.getC());
-            } else if (cal.getB().equals("/")) {
-                System.out.println(cal.getA() / cal.getC());
-            } else if (cal.getB().equals("%")) {
-                System.out.println(cal.getA() % cal.getC());
-            }
+          if (cal.getB().equals("+")) {
+              System.out.println("입력한 값들의 합은 " + (cal.getA() + cal.getC()) + " 입니다.");
+          } else if (cal.getB().equals("-")) {
+              System.out.println(cal.getA() - cal.getC());
+          } else if (cal.getB().equals("*")) {
+              System.out.println(cal.getA() * cal.getC());
+          } else if (cal.getB().equals("/")) {
+              System.out.println(cal.getA() / cal.getC());
+          } else if (cal.getB().equals("%")) {
+              System.out.println(cal.getA() % cal.getC());
+          }
 
 
-        }
+
     }
+
+}
 
