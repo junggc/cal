@@ -65,15 +65,19 @@ public class Calculator {
           //       System.out.println(cal.getC());
 
           if (cal.getB().equals("+")) {
-              System.out.println("입력한 값들의 합은 " + (cal.getA() + cal.getC()) + " 입니다.");
-          } else if (cal.getB().equals("-")) {
-              System.out.println(cal.getA() - cal.getC());
-          } else if (cal.getB().equals("*")) {
-              System.out.println(cal.getA() * cal.getC());
-          } else if (cal.getB().equals("/")) {
-              System.out.println(cal.getA() / cal.getC());
-          } else if (cal.getB().equals("%")) {
-              System.out.println(cal.getA() % cal.getC());
+              System.out.println("계산결과는 " + (cal.getA() + cal.getC()) + " 입니다.");
+          }
+          else if (cal.getB().equals("-")) {
+              System.out.println("계산결과는 " + (cal.getA() - cal.getC()) + " 입니다.");
+          }
+          else if (cal.getB().equals("*")) {
+              System.out.println("계산결과는 " + (cal.getA() * cal.getC()) + " 입니다.");
+          }
+          else if (cal.getB().equals("/")) {
+              System.out.println("계산결과는 " + (cal.getA() / cal.getC()) + " 입니다.");
+          }
+          else if (cal.getB().equals("%")) {
+              System.out.println("계산결과는 " + (cal.getA() % cal.getC()) + " 입니다.");
           }
 
 
